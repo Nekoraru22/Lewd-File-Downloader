@@ -39,7 +39,7 @@ def download():
     print (Fore.LIGHTMAGENTA_EX + 'Image name: ' + Fore.LIGHTCYAN_EX + image_name + Fore.RESET)
 
     resp = requests.get(link, stream=True)
-    local_file = open(image_name, 'xb')
+    local_file = open(image_name, 'wb')
     resp.raw.decode_content = True
     shutil.copyfileobj(resp.raw, local_file)
     del resp
@@ -59,7 +59,7 @@ def download2():
     print (Fore.LIGHTMAGENTA_EX + 'Image name: ' + Fore.LIGHTCYAN_EX + image_name + Fore.RESET)
 
     resp = requests.get(link, stream=True)
-    local_file = open(image_name, 'xb')
+    local_file = open(image_name, 'wb')
     resp.raw.decode_content = True
     shutil.copyfileobj(resp.raw, local_file)
     del resp
@@ -115,7 +115,7 @@ print (Fore.LIGHTMAGENTA_EX + 'Image name: ' + Fore.LIGHTCYAN_EX + image_name + 
 resp = requests.get(link, stream=True)
 
  # Open a local file with wb ( write binary ) permission.
-local_file = open(image_name, 'xb')
+local_file = open(image_name, 'wb')
 
 # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
 resp.raw.decode_content = True
@@ -138,6 +138,10 @@ elif passwd == "":
         download2()
 # ------------------------------------ /Repeat --------------------------------------#
 
-# Close.
+# Rute.
+rute = os.getcwd()
+
+# Close script
+print(Fore.LIGHTGREEN_EX + 'All the files downloaded succesfully at "' + rute + '\"' + Fore.RESET)
 print(Fore.LIGHTYELLOW_EX + 'Closing...' + Fore.RESET)
 time.sleep(2)
