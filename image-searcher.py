@@ -107,13 +107,13 @@ while True:
         print(Fore.LIGHTGREEN_EX + '[-] Password correct!!')
         time.sleep(0.5)
         lewdfolder()
-        print(Fore.LIGHTGREEN_EX + '[-] Loading List...\n' + Fore.RESET)
+        print(Fore.LIGHTYELLOW_EX + '[-] Loading List...\n' + Fore.RESET)
         time.sleep(0.5)
         while True:
-            print('# --------------------------------------- #')
+            print(Fore.BLUE + '# --------------------------------------- #' + Fore.RESET)
             for elem in mylist:
                 print('[·] '+ Fore.LIGHTBLACK_EX + elem + Fore.RESET)
-            print('# --------------------------------------- #\n')
+            print(Fore.BLUE + '# --------------------------------------- #\n' + Fore.RESET)
             print(Fore.LIGHTCYAN_EX + '\n[-] Select tag of image library' +Fore.CYAN + ' (Enter = predeterminate = neko): ' + Fore.RESET)
             tag = input()
                 
@@ -187,11 +187,11 @@ def repeat():
 repeat()
 # ------------------------------------ /Repeat -------------------------------------- #
 
-
-
 # Close script
+systemrute = os.getcwd()
+systemrute = systemrute.replace("\\", "/")
 total = number - n
-print(Fore.LIGHTGREEN_EX + str(total) + ' files downloaded succesfully at "' + rute + '\"' + Fore.RESET)
+print(Fore.LIGHTGREEN_EX + str(total) + ' files downloaded succesfully at "' + systemrute + '/' + rute + tag + '\"' + Fore.RESET)
 print(Fore.LIGHTRED_EX + 'Files repeated: ' + Fore.LIGHTRED_EX + str(n) + Fore.RESET )
 close = input('\nPress enter to close...')
 print(Fore.LIGHTYELLOW_EX + 'Closing...' + Fore.RESET)
