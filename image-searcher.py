@@ -1,4 +1,4 @@
-#pip install [requests, bs4, shutil, nekos.py]
+#pip install [requests, bs4, shutil, nekos.py, sqlite3, colorama, tqdm]
 import requests, shutil, bs4, time, string, re, os, sys, nekos, sqlite3
 from colorama import Fore, init
 from bs4 import BeautifulSoup
