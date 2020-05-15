@@ -148,7 +148,7 @@ while True:
         time.sleep(2)
 
 number = int(input('\nEnter the number of files to download ==> '))
-
+print(Fore.BLUE + '\n# --- ' + '1' + ' --- #' + Fore.RESET)
 print(Fore.LIGHTMAGENTA_EX + "URL Image: " + Fore.LIGHTCYAN_EX + link + Fore.RESET)
 
 # Name of image.
@@ -177,12 +177,17 @@ except:
 
 # ------------------------------------ Repeat -------------------------------------- #
 def repeat():
+    b = 1
     global number
     if passwd == 'meow': 
         for ejecucion in range(number - 1):
+            b = b + 1
+            print(Fore.BLUE + '# --- ' + str(b) + ' --- #' + Fore.RESET)
             download()
     elif passwd == "":
         for ejecucion in range(number - 1):
+            b = b + 1
+            print(Fore.BLUE + '# --- ' + str(b) + ' --- #' + Fore.RESET)
             download2()
 repeat()
 # ------------------------------------ /Repeat -------------------------------------- #
