@@ -55,11 +55,12 @@ def download():
 
     resp = requests.get(link, stream=True)
     try:
+        # Dowload image file
         local_file = open(rute + tag + '/' + image_name, 'xb')
         resp.raw.decode_content = True
         shutil.copyfileobj(resp.raw, local_file)
         del resp
-        # Dowload image file
+        # Animation
         for i in tqdm(range(100), unit=" bits", desc= "Getting File"):
             print('', end='\r')
     except:
@@ -80,11 +81,12 @@ def download2():
 
     resp = requests.get(link, stream=True)
     try:
+        # Dowload image file
         local_file = open(rute + tag + '/' + image_name, 'xb')
         resp.raw.decode_content = True
         shutil.copyfileobj(resp.raw, local_file)
         del resp
-        # Dowload image file
+        # Animation
         for i in tqdm(range(100), unit=" bits", desc= "Getting File"):
             print('', end='\r')
     except:
@@ -133,16 +135,6 @@ while True:
         print(Fore.LIGHTGREEN_EX + 'Logged as a Guest' + Fore.RESET)
         tag = 'Guest'
         break
-    elif passwd == "nigger":
-        print(Fore.LIGHTGREEN_EX + """
- ███╗░░░██╗██╗░██████╗░░██████╗░███████╗██████╗
- ████╗░░██║██║██╔════╝░██╔════╝░██╔════╝██╔══██╗
- ██╔██╗░██║██║██║░░███╗██║░░███╗█████╗░░██████╔╝
- ██║╚██╗██║██║██║░░░██║██║░░░██║██╔══╝░░██╔══██╗
- ██║░╚████║██║╚██████╔╝╚██████╔╝███████╗██║░░██║
- ╚═╝░░╚═══╝╚═╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝""")
-        time.sleep(3)
-        exit()
     else:
         print(Fore.LIGHTRED_EX + '[-] Error... Retrying...' + Fore.RESET)
         time.sleep(2)
